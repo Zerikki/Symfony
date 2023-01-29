@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="/home">
+		<img src="/build/Images/ToDo.png">
+	</a>
+</nav>
+
+
+    <h1>Inscription</h1>
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.username, {
+            label: 'Utilisateur'
+        }) }}
+
+    {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot De Passe'
+        }) }}
+    {{ form_row(registrationForm.agreeTerms, {
+            label: 'Acceptez les termes'
+        }) }}
+    </div>
+        <button type="submit" class="btn btn-primary">Inscription</button>
+
+    {{ form_end(registrationForm) }}
+{% endblock %}

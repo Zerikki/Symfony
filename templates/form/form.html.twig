@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FormController!{% endblock %}
+
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="/home">
+		<img src="/build/Images/ToDo.png">
+	</a>
+</nav>
+
+{{form(Table_form)}}
+
+{% endblock %}
